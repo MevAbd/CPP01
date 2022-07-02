@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.class.hpp                                   :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,19 +10,27 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_CLASS_HPP
-# define HUMANA_CLASS_HPP
-# include "Weapon.class.hpp"
+#include "HumanB.class.hpp"
 
-class	HumanA
+HumanB::HumanB(std::string _name) : _name(_name)
 {
-	private	:
-				std::string	_name;
-				Weapon		&_Weapon;
-	public	:
-				HumanA(std::string _name, Weapon &_Weapon);
-				~HumanA(void);
-				void	attack(void) const;
-};
+	return ;
+}
 
-#endif
+HumanB::~HumanB(void)
+{
+	return ;
+}
+
+void HumanB::attack(void) const
+{
+	if (this->_Weapon->getType() == "")
+		std::cout << this->_name << "can't attack" << std::endl;
+	else
+		std::cout << this->_name << " attacks with their " << this->_Weapon->getType() << std::endl;
+}
+
+void HumanB::setWeapon(Weapon &Weapon)
+{
+	this->_Weapon = &Weapon;
+}
