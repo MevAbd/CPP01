@@ -20,7 +20,7 @@ class	HumanA
 				std::string	_name;
 				Weapon		&_Weapon;
 	public	:
-				HumanA(std::string _name, Weapon &_Weapon);
+				HumanA(std::string _name, Weapon &Weapon);
 				~HumanA(void);
 				void	attack(void) const;
 };

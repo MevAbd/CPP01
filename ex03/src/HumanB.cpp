@@ -12,7 +12,7 @@
 
 #include "HumanB.class.hpp"
 
-HumanB::HumanB(std::string _name) : _name(_name)
+HumanB::HumanB(std::string _name) : _name(_name), _Weapon(NULL)
 {
 	return ;
 }
@@ -24,8 +24,8 @@ HumanB::~HumanB(void)
 
 void HumanB::attack(void) const
 {
-	if (this->_Weapon->getType() == "")
-		std::cout << this->_name << "can't attack" << std::endl;
+	if (this->_Weapon == NULL)
+		std::cout << this->_name << " can't attack because he haven't got a weapon. TRY AGAIN." << std::endl;
 	else
 		std::cout << this->_name << " attacks with their " << this->_Weapon->getType() << std::endl;
 }

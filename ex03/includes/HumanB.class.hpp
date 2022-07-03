@@ -20,7 +20,7 @@ class	HumanB
 				std::string	_name;
 				Weapon		*_Weapon;
 	public	:
-				HumanB(std::string _name);
+				HumanB(std::string name);
 				~HumanB(void);
 				void	attack(void) const;
 				void	setWeapon(Weapon &Weapon);
