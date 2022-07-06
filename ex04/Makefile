@@ -5,7 +5,7 @@ OBJ_DIR	= objs/
 
 VPATH	= $(SRC)
 
-FLAGS = -Wall -Werror -Wextra -std=c++98 -g
+FLAGS = -Wall -Werror -Wextra -std=c++98
 
 $(OBJ_DIR)%.o	: %.cpp
 				mkdir -p $(OBJ_DIR)
