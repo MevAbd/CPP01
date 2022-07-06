@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 15:12:31 by malbrand          #+#    #+#             */
-/*   Updated: 2022/06/07 16:08:11 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/07 00:35:00 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,16 @@ int	main(void)
 	Graagh.announce();
 	Bruuh.announce();
 
+	std::cout << std::endl;
 	randomChump("Rot");
+	std::cout << std::endl;
 
 	Zombie	*Dunce;
 
 	Dunce = newZombie("Dunce");
 	Dunce->announce();
 	randomChump("Pinhead");
+	std::cout << std::endl;
 	delete Dunce;
 	return (0);
 }

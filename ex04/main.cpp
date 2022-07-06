@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 21:51:58 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/06 22:08:19 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/07 00:41:02 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void	replace(std::fstream &file, std::string s1, std::string s2, std::string lin
 	pos = line.find(s1);
 	if (pos == std::string::npos)
 	{
-		std::cout << pos << std::endl;
 		file << line;
 		return ;
 	}
